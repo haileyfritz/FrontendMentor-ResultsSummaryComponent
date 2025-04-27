@@ -1,0 +1,252 @@
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background: hsl(221, 100%, 96%);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+#card{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    background-color: #FFF;
+    border-radius: 20px;
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    color: #FFF;
+}
+
+#summary{
+    width: 50%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(241, 100%, 89%);
+}
+
+#score-bubble{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    width: 55%;
+    aspect-ratio: 1/1;
+    
+    margin: 1rem;
+}
+
+#score-bubble > *{
+    margin: 0;
+}
+
+#score-bubble > p:not(#score){
+    font-size: 0.80rem;
+    color: hsl(241, 100%, 89%);
+}
+
+#score{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#description{
+    width: 80%;
+    margin-top: 1rem;
+}
+
+#description > *{
+    margin: 0;
+}
+
+#description > h2{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#description > p{
+    font-size: 0.8rem;
+    color: hsl(241, 100%, 89%);
+    margin-top: 0.5rem;
+}
+
+#summary > h1{
+    color: hsl(224, 30%, 27%);
+}
+
+.category{
+    
+    background:hsl(252, 100%, 67%, 20%);
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0.35rem 0; 
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.category p:not(.mark){
+    text-align: left;
+}
+
+.heading{
+    display:flex;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+button{
+    align-self: center;
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 40px;
+    background: hsl(224, 30%, 27%);
+    color: #fff;
+    border: 0;
+    margin-top: 1.25rem;
+}
+
+button:hover{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    cursor: pointer;
+}
+
+#reaction{
+    background: hsl(0, 100%, 67%, 10%);
+}
+
+#memory{
+    background: hsl(39, 100%, 56%, 10%);
+}
+
+#verbal{
+    background: hsl(166, 100%, 37%, 10%);
+}
+
+#visual{
+    background: hsl(234, 85%, 45%, 10%);
+}
+
+#reaction p:not(.mark){
+    color: hsl(0, 100%, 67%);
+}
+
+#memory p:not(.mark){
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal p:not(.mark){
+    color: hsl(166, 100%, 37%);
+}
+
+#visual p:not(.mark){
+    color: hsl(234, 85%, 45%);
+}
+
+.mark{
+    margin: auto;
+    color: hsl(241, 100%, 89%);
+    text-align: right;
+    flex-shrink: 0;
+    min-width: auto;
+}
+
+.mark b{
+    color: hsl(224, 30%, 27%);
+}
+
+img{
+    width: 15px;
+}
+
+.attribution {
+    position: relative;
+    margin-top: 0.5rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (max-width:375px) {
+    
+    #card{
+        width: 100%;
+        max-width: 100vw;
+        flex-direction: column;
+    }
+
+    #result{
+        width: 100%;
+        max-width: 100vw;
+        border-radius: 0 0 30px 30px;
+    }
+
+    #summary{
+        width: 100%;
+        /* max-width: 100vw; */
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column; 
+        
+    }
+
+    #description{
+        margin-bottom: 1rem;
+    }
+
+    #score-bubble{
+        width: 45%;
+        aspect-ratio: 1/1;
+        margin: 1rem;
+    }
+
+    #score{
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+
+    .category{
+        
+        padding: 0 0.5rem;
+        margin: 0.35rem 0;
+    }
+}
